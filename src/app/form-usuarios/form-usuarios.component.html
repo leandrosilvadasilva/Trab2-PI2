@@ -1,0 +1,17 @@
+<div class="container">
+<h3>{{titulo}} </h3>
+
+<div>
+Nome: <input  class="form-control" type="text" [(ngModel)]="usuario.nome"> <br/>
+
+Email: <input  class="form-control" type="text" [(ngModel)]="usuario.email"> <br/>
+
+Username: <input  class="form-control" type="text" [(ngModel)]="usuario.username"> <br/>
+
+
+<button value="Salvar" (click)="salvar()" type="button" class="btn btn-default btn-lg btn-block">Salvar</button>
+<button value="Cancelar" (click)="cancelar()" type="button" class="btn btn-default btn-lg btn-block">Cancelar</button>
+
+
+</div>
+</div>

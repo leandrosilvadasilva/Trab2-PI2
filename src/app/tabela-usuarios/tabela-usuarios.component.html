@@ -1,0 +1,32 @@
+<div class="container">
+
+<div class="panel panel-default">
+  <div class="panel-heading"> Tabela de Usuários</div>
+
+<table class="table table-striped">
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Username</th>
+     <th>Editar</th>
+    <th>Remover</th>
+  </tr>
+  <tr *ngFor='let usuario of usuarios;let i=index'>
+    <td>{{usuario.nome}}</td>
+    <td>{{usuario.email}}</td>
+    <td>{{usuario.username}}</td>
+    
+    <td><a [routerLink]="['/edicao',i]" >Editar</a></td>
+   
+    <td><a routerLink="/lista" (click)="excluirUsuario(usuario)">Remover</a></td>
+  </tr>
+</table>
+<br>
+
+
+
+
+<button routerLink="/novo" type="button" class="btn btn-default btn-lg btn-block">Novo Usuário</button>
+
+</div>
+</div>
